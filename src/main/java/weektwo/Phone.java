@@ -1,17 +1,26 @@
 package weektwo;
 
+import java.util.Scanner;
+
 public class Phone {
 
     private String type;
     private int mem;
 
     public static void main(String[] args) {
-        Phone phone1 = new Phone("Samsung", 64);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Type: ");
+        String type = scanner.nextLine();
+        System.out.print("Memory: ");
+        int mem = Integer.parseInt(scanner.nextLine());
+
+        Phone phone1 = new Phone(type, mem);
         Phone phone2 = new Phone("Honor", 128);
-        System.out.println(phone1.type);
-        System.out.println(phone1.mem);
-        System.out.println(phone2.type);
-        System.out.println(phone2.mem);
+
+        System.out.println(phone1.type + " " + phone1.mem);
+        System.out.println(phone2.type + " " + phone2.mem);
+
     }
 
     public Phone(String type, int mem) {
