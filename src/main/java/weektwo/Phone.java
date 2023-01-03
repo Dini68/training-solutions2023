@@ -8,6 +8,7 @@ public class Phone {
     private int mem;
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Type: ");
@@ -43,6 +44,4 @@ public class Phone {
     public void setMem(int mem) {
         this.mem = mem;
     }
-
-
 }
