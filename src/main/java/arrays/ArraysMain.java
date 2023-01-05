@@ -41,6 +41,15 @@ public class ArraysMain {
         return anotherDayHours;
     }
 
+    public boolean wonLottery(int[] tip, int[] won) {
+        int[] tipCopy = Arrays.copyOf(tip, tip.length);
+        int[] wonCopy = Arrays.copyOf(won, won.length);
+
+        Arrays.sort(tipCopy);
+        Arrays.sort(wonCopy);
+        return Arrays.equals(tipCopy, wonCopy);
+    }
+
 
     public static void main(String[] args) {
         ArraysMain am = new ArraysMain();
@@ -59,6 +68,15 @@ public class ArraysMain {
         double[] day3 = {4, 1.6, 2.3, 3.8, 5};
         double[] anotherDay3 = {4, 1.6, 2.3, 3.8};
         System.out.println(am.sameTempValuesDaylight(day3, anotherDay3));
+
+        int[] tip = {8, 1, 12, 11, 20};
+        int[] won = {20, 8, 1, 12, 11};
+        System.out.println(Arrays.toString(tip));
+        System.out.println(Arrays.toString(won));
+
+        System.out.println(am.wonLottery(tip, won));
+        System.out.println(Arrays.toString(tip));
+        System.out.println(Arrays.toString(won));
     }
 
 }
