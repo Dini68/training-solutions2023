@@ -11,7 +11,6 @@ public class Rectangle {
                 rectangular[i][j] = i;
             }
         }
-
         return rectangular;
     }
 
