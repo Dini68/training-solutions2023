@@ -21,10 +21,24 @@ public class ArraysMain {
         return Arrays.deepToString(mul);
     }
 
+    public boolean sameTempValues(double[] day,
+                                  double[] anotherDay) {
+        return Arrays.equals(day, anotherDay);
+    }
+
     public static void main(String[] args) {
         ArraysMain am = new ArraysMain();
         System.out.println(am.numberOfDaysAsString());
 
         System.out.println(am.multiplicationTableAsString(5));
+
+        double[] day = {1.5, 2.0};
+        double[] anotherDay = {1.6, 2.3};
+        System.out.println(am.sameTempValues(day, anotherDay));
+
+        double[] day2 = {1.6, 2.3};
+        double[] anotherDay2 = {1.6, 2.3};
+        System.out.println(am.sameTempValues(day2, anotherDay2));
     }
+
 }
