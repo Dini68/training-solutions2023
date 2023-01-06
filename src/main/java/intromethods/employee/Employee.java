@@ -6,8 +6,7 @@ public class Employee {
     private final int hiringYear;
     private int salary;
 
-    public Employee(String name, int hiringYear,
-                    int salary) {
+    public Employee(String name, int hiringYear, int salary) {
         this.name = name;
         this.hiringYear = hiringYear;
         this.salary = salary;
