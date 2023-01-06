@@ -37,7 +37,6 @@ public class StudyGroup {
         students.add("Kovács Miklós");
 
         StudyGroup sg = new StudyGroup();
-
         sg.printStudyGroups(students);
 
         System.out.println(sg.getStudyGroup1());
