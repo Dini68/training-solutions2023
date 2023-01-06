@@ -19,8 +19,11 @@ public class Product {
     }
 
     public boolean areTheyEqual(Product p) {
-        return name.equals(p.name) &&
-                Math.abs(code.length() - p.code.length()) <= 1;
+        boolean nameEqual = name.equals(p.getName());
+        boolean codeDifference = Math.abs(code.length() -
+                p.getCode().length()) <= 1;
+
+        return nameEqual && codeDifference;
     }
 
     public static void main(String[] args) {
