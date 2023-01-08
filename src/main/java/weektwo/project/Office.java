@@ -31,32 +31,30 @@ public class Office {
 
     public void printAreas() {
         for (MeetingRoom item : meetingRooms) {
-            System.out.println(item.getName() + ": sz=" +
-                    item.getWidth() + " h=" +
-                    item.getLength() + " t=" +
-                    item.getArea());
+            System.out.println(item.getName() + ": " +
+                    getMeetingRoomInfo(item));
         }
     }
 
     public void printMeetingRoomsWithName(String name) {
         for (MeetingRoom item : meetingRooms) {
             if (item.getName().equals(name)) {
-                System.out.println("sz=" +
-                        item.getWidth() + " h=" +
-                        item.getLength() + " t=" +
-                        item.getArea());
+                System.out.println(getMeetingRoomInfo(item));
             }
         }
+    }
+
+    private String getMeetingRoomInfo(MeetingRoom item) {
+        return ("sz=" + item.getWidth() +
+                " h=" + item.getLength() +
+                " t=" + item.getArea());
     }
 
     public void printMeetingRoomsContains(String part) {
         for (MeetingRoom item : meetingRooms) {
             if (item.getName().toLowerCase().contains(
                     part.toLowerCase())) {
-                System.out.println("sz=" +
-                        item.getWidth() + " h=" +
-                        item.getLength() + " t=" +
-                        item.getArea());
+                System.out.println(getMeetingRoomInfo(item));
             }
         }
     }
@@ -64,10 +62,7 @@ public class Office {
     public void printAreasLargerThan(int area) {
         for (MeetingRoom item : meetingRooms) {
             if (item.getArea() > area) {
-                System.out.println(item.getName() + ": sz=" +
-                        item.getWidth() + " h=" +
-                        item.getLength() + " t=" +
-                        item.getArea());
+                System.out.println(getMeetingRoomInfo(item));
             }
         }
     }
