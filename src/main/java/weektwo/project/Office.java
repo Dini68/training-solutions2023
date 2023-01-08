@@ -54,7 +54,8 @@ public class Office {
         for (MeetingRoom item : meetingRooms) {
             if (item.getName().toLowerCase().contains(
                     part.toLowerCase())) {
-                System.out.println(getMeetingRoomInfo(item));
+                System.out.println(item.getName() + ": " +
+                        getMeetingRoomInfo(item));
             }
         }
     }
@@ -62,7 +63,8 @@ public class Office {
     public void printAreasLargerThan(int area) {
         for (MeetingRoom item : meetingRooms) {
             if (item.getArea() > area) {
-                System.out.println(getMeetingRoomInfo(item));
+                System.out.println(item.getName() + ": " +
+                        getMeetingRoomInfo(item));
             }
         }
     }

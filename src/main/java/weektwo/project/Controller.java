@@ -69,12 +69,16 @@ public class Controller {
             numOfMenu = Integer.parseInt(scanner.nextLine());
 
             if (numOfMenu == 1) {
+                System.out.println("Tárgyalók sorrendben: ");
                 office.printNames();
             } else if (numOfMenu == 2) {
+                System.out.println("Tárgyalók visszafelé sorrendben: ");
                 office.printNamesReverse();
             } else if (numOfMenu == 3) {
+                System.out.println("Minden második tárgyaló: ");
                 office.printEventNames();
             } else if (numOfMenu == 4) {
+                System.out.println("Területek: ");
                 office.printAreas();
             } else if (numOfMenu == 5) {
                 System.out.print("Tárgyaló neve: ");
@@ -90,5 +94,6 @@ public class Controller {
                         Integer.parseInt(scanner.nextLine()));
             }
         } while (numOfMenu != 8);
+        System.out.println("Kilépés");
     }
 }
