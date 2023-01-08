@@ -13,9 +13,9 @@ public class Languages {
         languages.add("JavaScript");
 
         System.out.println("Length is more than 5: ");
-        for (String s: languages) {
-            if (s.length() > 5) {
-                System.out.println(s);
+        for (String item : languages) {
+            if (item.length() > 5) {
+                System.out.println(item);
             }
         }
     }
