@@ -8,11 +8,6 @@ public class Books {
 
     private final List<String> titles = new ArrayList<>();
 
-    @Override
-    public String toString() {
-        return "titles: " + titles;
-    }
-
     public List<String> getTitles() {
         return titles;
     }
@@ -47,15 +42,15 @@ public class Books {
             System.out.print(i + 1 + ". könyv címe: ");
             books.addBook(scanner.nextLine());
         }
-        System.out.println(books);
+        System.out.println(books.getTitles());
 
         books.findBookAndSetAuthor("Egri cs", "Gárdonyi");
 
-        System.out.println(books);
+        System.out.println(books.getTitles());
 
         books.findBookAndSetAuthor("Egri csillagok",
                 "Gárdonyi Géza");
 
-        System.out.println(books);
+        System.out.println(books.getTitles());
     }
 }
