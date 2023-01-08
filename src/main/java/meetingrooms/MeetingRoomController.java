@@ -116,7 +116,7 @@ public class MeetingRoomController {
 
     private void printIfMenu1() {
         System.out.println("...Tárgyalók sorrendben: ");
-        for (MeetingRoom item : office.getMeetingRooms()) {
+        for (MeetingRoom item : getOffice().getMeetingRooms()) {
             System.out.println(item.getName());
         }
     }

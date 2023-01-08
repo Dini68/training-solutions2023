@@ -34,13 +34,12 @@ public class Office {
     }
 
     public MeetingRoom getMeetingRoomWithGivenName(String name) {
-        MeetingRoom result = null;
         for (MeetingRoom item : meetingRooms) {
             if (item.getName().equals(name)) {
                 return item;
             }
         }
-        return result;
+        return null;
     }
 
     public List<MeetingRoom> getMeetingRoomsWithGivenNamePart(String partName) {
