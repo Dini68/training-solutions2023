@@ -1,12 +1,12 @@
 package tesco;
 
-public enum EmploymentType {
+public enum Employment {
 
-    WEEKLY_40_HOURS(40), WEEKLY_30_HOURS(30), WEEKLY_20_HOURS(20);
+    FORTY_HOURS(40), THIRTY_HOURS(30), TWENTY_HOURS(20);
 
     private final int hours;
 
-    EmploymentType( int hours) {
+    Employment(int hours) {
         this.hours = hours;
     }
 
