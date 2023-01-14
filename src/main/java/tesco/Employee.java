@@ -1,5 +1,7 @@
 package tesco;
 
+import java.util.Arrays;
+
 public class Employee {
 
     private final String name;
@@ -15,6 +17,8 @@ public class Employee {
     public static void main(String[] args) {
         Employee emp = new Employee("Kovács", "517190", EmploymentType.WEEKLY_40_HOURS);
         System.out.println(emp.getEmployment().getHours());
+        System.out.println(Arrays.toString(EmploymentType.values()));
+        System.out.println(EmploymentType.valueOf("WEEKLY_40_HOURS"));
     }
 
     public String getName() {
